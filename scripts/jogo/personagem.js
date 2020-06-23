@@ -2,8 +2,8 @@ class Personagem {
   constructor(imagem) {
     this.imagem = imagem;
     this.frameAtual = 0;
-    this.alturaPersonagem = 135;
-    this.larguraPersonagem = 110;
+    this.alturaPersonagem = 190;
+    this.larguraPersonagem = 154;
     this.tamX = 220;
     this.tamY = 270;
   }
