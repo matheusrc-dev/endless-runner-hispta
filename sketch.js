@@ -95,7 +95,7 @@ function draw() {
   if (personagem.estaColidindo(inimigo)) {
     console.log('colidiu');
     somDoJogo.pause();
-    image(gameOver, width / 4,height / 2 - 50);
+    image(gameOver, width /  2 - 200, height / 2 - 30);
     noLoop();
   }
 }
