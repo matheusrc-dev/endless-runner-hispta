@@ -10,6 +10,14 @@ class Personagem extends Animacao{
     this.gravidade = 6;
     this.alturaDoPulo = -50;
     this.quantidadeDePulos = 0;
+    this.invencivel = false;
+  }
+  
+  anima(){
+    this.frameAtual++
+    if(this.frameAtual >= this.matriz.length - 1) {
+      this.frameAtual = 0
+    }
   }
   
   pula() {
@@ -32,8 +40,20 @@ class Personagem extends Animacao{
     }
   }
   
+  
+  tornarInvencivel() {
+    this.invencivel = true;
+    setTimeout(() => {
+      this.invencivel = false;
+    }, 1000);
+  }
+  
   estaColidindo(inimigo) {
-    const precisao = .7
+    if(this.invencivel) {
+      return false;
+    }
+    
+    const precisao = .7;
     
     /*noFill();
     
